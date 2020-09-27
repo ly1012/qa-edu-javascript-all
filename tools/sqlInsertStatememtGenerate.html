@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 工具用途：根据表格内容，生成 Insert 语句 -->
+	<!-- 只写了 HTML 页面结构，没有完成，工具开发暂停，后面如果感觉有需要再说 -->
+	<meta charset="UTF-8">
+	<title>sql_insert</title>
+</head>
+<body>
+
+	<div id="app1">
+		<div class="sql">
+			<div contenteditable="true" style="height: 200px">insert into <span style="color:green">{{tablename}}</span>() values();</div>
+			
+		</div>
+
+		<table id="app">
+			<tbody cellspacing="0">
+				<tr v-for="col in cols">
+					<td width="30%"><input v-bind:value="col[0]"></td>
+					<td width="30%"><input v-bind:value="col[1]"></td>
+					<td width="40%"><input v-bind:value="col[2]"></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<div v-for="col in cols">
+			<input width="200px" v-bind:value="col[0]" >
+			<input width="200px" v-bind:value="col[1]" >
+			<input width="200px" v-bind:value="col[2]" >
+			
+			<!-- <input v-model="tablename"> -->
+			<!-- <p>insert into {{tablename}}() values();</p> -->
+			
+		</div>
+		<label>表名：</label>
+		<input v-model="tablename" placeholder="edit me">
+		<!-- <div contenteditable="true" v-model="message"></div> -->
+		
+	</div>
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</body>
+</html>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app1',
+	  data: {
+	  	pick:"picklailiao",
+	  	a:"woshia",
+	  	message:"消息",
+	  	tablename:"ta",
+	    cols: [
+	    	["channel_id","渠道编号","0A870030ED7511E7A1E254EE758F97F8"],
+	    	["channel_name","渠道名称","selenium交流专用超级"]
+	    ]
+	  }
+	})
+</script>

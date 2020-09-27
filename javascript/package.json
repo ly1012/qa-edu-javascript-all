@@ -1,0 +1,22 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test-js": "mocha --recursive --reporter mochawesome",
+    "test-help": "mocha -h",
+    "test-document": "mocha --recursive -R doc > spec.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1"
+  },
+  "author": "LiYun",
+  "license": "ISC"
+}
